@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f410ab5d-f87e-48df-ba5c-9f5b40f49e2e)# Alzheimer's Detection through Brain Imaging using CNN and RNN
+# Alzheimer's Detection Through Brain Imaging Using Deep Learning Models
 
 This project detects Alzheimer's disease using deep learning techniques (CNN and RNN) from brain imaging data. It provides a web interface where users can upload brain scans and get a diagnosis.
 
