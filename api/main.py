@@ -22,16 +22,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("D:\\Projects\\alzheimers_detection\\model.h5")
+MODEL = tf.keras.models.load_model("D:\\Projects\\neuroscan\\model.h5")
 CLASS_NAMES = ["MildDemented", "ModerateDemented", "NonDemented", "VeryMildDemented"]
-
 
 @app.get("/ping")
 async def ping():
     return "Hello"
 
 def read_file_as_image(data) -> np.ndarray:
-    image = Image.open(BytesIO(data)).convert("RGB")  # Convert to RGB
+    image = Image.open(BytesIO(data)).convert("RGB")
     image = np.array(image)
     return image
 
@@ -40,8 +39,8 @@ async def predict (
     file: UploadFile = File(...)
 ):
     image = read_file_as_image(await file.read())
-    img_batch = np.expand_dims(image, 0)  # Add batch dimension
-    img_batch = np.resize(img_batch, (32, 208, 176, 3))  # Resize to match the expected batch size
+    img_batch = np.expand_dims(image, 0)
+    img_batch = np.resize(img_batch, (32, 208, 176, 3))
     
     predictions = MODEL.predict(img_batch)
     
@@ -54,3 +53,4 @@ async def predict (
 
 if __name__ == "__main__":
     uvicorn.run(app, host='localhost', port=8000)
+    

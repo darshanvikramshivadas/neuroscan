@@ -3,7 +3,6 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
 import Container from "@material-ui/core/Container";
 import React from "react";
 import Card from "@material-ui/core/Card";
@@ -62,8 +61,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    height: "93vh",
-    marginTop: "8px",
+    height: "90vh",
+    overflowX: 'hidden',
   },
   imageCard: {
     margin: "auto",
@@ -227,7 +226,7 @@ export const ImageUpload = () => {
       <AppBar position="static" className={classes.appbar}>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            Alzheimer's Detection through Brain Imaging
+            Alzheimer's Detection Through Brain Imaging Using Deep Learning Models
           </Typography>
           <div className={classes.grow} />
         </Toolbar>
@@ -257,7 +256,7 @@ export const ImageUpload = () => {
                 <CardContent className={classes.content}>
                   <DropzoneArea
                     acceptedFiles={['image/*']}
-                    dropzoneText={"Drag and drop a brain image to detect Alzheimer's"}
+                    dropzoneText={"Drag and drop a medical image of a brain to detect Alzheimer's"}
                     onChange={onSelectFile}
                   />
                 </CardContent>
