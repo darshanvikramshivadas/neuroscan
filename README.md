@@ -9,8 +9,6 @@ This project detects Alzheimer's disease using deep learning techniques (CNN and
 - [Installation](#installation)
 - [Running the App](#running-the-app)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
-- [License](#license)
 
 ## Features
 
