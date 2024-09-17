@@ -1,4 +1,4 @@
-# Alzheimer's Detection Through Brain Imaging Using Deep Learning Models
+# Alzheimer's Detection through Brain Imaging using Deep Learning Models
 
 This project detects Alzheimer's disease using deep learning techniques (CNN and RNN) from brain imaging data. It provides a web interface where users can upload brain scans and get a diagnosis.
 
