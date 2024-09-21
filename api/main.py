@@ -22,7 +22,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("D:\\Projects\\neuroscan\\model.h5")
+MODEL = tf.keras.models.load_model("D:\\Projects\\neuroscan\\model_swish.h5")
 CLASS_NAMES = ["MildDemented", "ModerateDemented", "NonDemented", "VeryMildDemented"]
 
 @app.get("/ping")
